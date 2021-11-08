@@ -39,8 +39,8 @@ Route::get("callback", function (Request $request){
         'redirect_uri' => env('REDIRECT_URL'),
         'code' => $request->code,
     ]);
-
     dd($response->json());
+
 });
 
 Route::get('/acessar',[\App\Http\Controllers\Acesso\AcessoController::class,'index']);
